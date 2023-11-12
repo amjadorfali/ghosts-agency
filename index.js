@@ -1,14 +1,19 @@
-// const button = document.getElementById("button");
+const button = document.getElementById("book-now");
+const yearSpan = document.getElementById("year");
 // const alertEl = document.getElementById("alert");
 
-// /**
-//  * @description onClick
-//  * @param {MouseEvent} _event
-//  */
-// const onClick = _event => {
-//     alertEl.hidden = !alertEl.hidden;
-// };
+const leftEye = document.getElementById("left-eye");
+const rightEye = document.getElementById("right-eye");
 
-// button.addEventListener("click", onClick);
+/**
+ * @description onClick
+ * @param {MouseEvent} _event
+ */
+const onClick = _event => {
+  leftEye.classList.toggle("confirmation");
+  rightEye.classList.toggle("confirmation");
+};
 
-//This is a test
+button.addEventListener("click", onClick);
+
+yearSpan.innerText = new Date().getFullYear();
