@@ -1,0 +1,33 @@
+article.wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 900px) {
+  article.wrapper {
+    flex-wrap: nowrap;
+  }
+}
+
+section.selling-point {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+section.selling-point h1 {
+  color: var(--red-pink);
+  text-transform: uppercase;
+}
+
+section.selling-point p {
+  opacity: 0.8;
+}
+
+section.selling-point .action-buttons {
+  display: flex;
+  justify-content: center;
+}
