@@ -1,0 +1,26 @@
+#fire-bottom-left {
+  transform-origin: left;
+  /* transform-origin: 50% 65%; */
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  animation-name: firez;
+  transform: scale(1);
+  transform-style: preserve-3d;
+}
+
+@keyframes firez {
+  50% {
+    transform: skewX(-3.5deg);
+    /* transform:; */
+    /* transform: skewX(-3.5deg) translateY(-20px) scaleY(1.05) rotateY(10deg);
+  }
+
+  100% {
+    /* transform: skewX(3.5deg); */
+
+    /* transform: skewX(3.5deg) translateY(20px) scaleY(0.9); */
+  }
+}

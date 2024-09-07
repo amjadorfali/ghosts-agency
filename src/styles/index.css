@@ -147,27 +147,23 @@ div.cube {
 }
 
 .f-1 {
-  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(0deg) translateZ(calc(var(--cube-dx) / 2));
 }
 
 .f-2 {
-  background: rgba(90, 90, 90, 0.7);
   transform: rotateX(-90deg) translateZ(calc(var(--cube-dx) / 2));
 }
 
 .f-3 {
-  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-180deg) translateZ(calc(var(--cube-dx) / 2));
 }
 .f-4 {
-  background: rgba(164, 160, 164, 0.7);
-
   transform: rotateX(-270deg) translateZ(calc(var(--cube-dx) / 2));
 }
 .face {
   display: flex;
-  backdrop-filter: blur(10px);
+  background: rgba(86, 60, 102, 0.702);
+  backdrop-filter: blur(20px);
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -176,8 +172,4 @@ div.cube {
   /* backface-visibility: visible; */
   font-size: 60px;
   color: #fff;
-}
-
-.face.active {
-  backdrop-filter: blur(20px);
 }

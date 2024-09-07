@@ -1,4 +1,4 @@
-import "./src/pages/skull/skull.js";
+import "./src/pages/cauldron/cauldron.js";
 
 const yearSpan = document.getElementById("year");
 yearSpan.innerText = new Date().getFullYear();
@@ -17,9 +17,10 @@ const translateZTick = 50;
 
 /** @type {number | KeyframeAnimationOptions } */
 const timing = {
-  duration: 300,
+  duration: 500,
   iterations: 1,
   fill: "both",
+  easing: "ease-in-out",
 };
 
 /** @type { {el: Element | null, num: number, rotationX:number, translateZ: number}[] } */
@@ -69,15 +70,14 @@ const onNavigate =
     if (navigating) return;
     navigating = true;
 
+    const rotationDirection = rotateXTick * (isUp ? -1 : 1);
     faceConfig.forEach(conf => {
-      conf.rotationX = rotateXTick * (isUp ? -1 : 1) + conf.rotationX;
+      conf.rotationX = rotationDirection + conf.rotationX;
 
       const animation = conf.el?.animate(
-        [
-          {
-            transform: `rotateX(${conf.rotationX}deg) translateZ(${conf.translateZ}vh)`,
-          },
-        ],
+        {
+          transform: `rotateX(${conf.rotationX}deg) translateZ(${conf.translateZ}vh)`,
+        },
         timing
       );
 

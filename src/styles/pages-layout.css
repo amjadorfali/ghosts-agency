@@ -31,3 +31,15 @@ section.selling-point .action-buttons {
   display: flex;
   justify-content: center;
 }
+
+button.btn {
+  background-color: var(--red-pink);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  width: 10rem;
+  height: 10rem;
+}
